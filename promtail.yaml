@@ -6,7 +6,7 @@ positions:
   filename: /tmp/positions.yaml
 
 clients:
-  - url: https://railway-loki-production.up.railway.app/metrics/loki/api/v1/push
+  - url: https://railway-loki-production.up.railway.app/loki/api/v1/push
 
 scrape_configs:
 - job_name: system
@@ -14,5 +14,5 @@ scrape_configs:
   - targets:
       - localhost
     labels:
-      job: varlogs
+      job: varlogs-loki
       __path__: /var/log/*log
